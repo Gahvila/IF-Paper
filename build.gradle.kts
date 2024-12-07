@@ -1,8 +1,7 @@
 plugins {
     java
     `maven-publish`
-    id("com.gradleup.shadow") version "8.3.5"
-    id("io.papermc.paperweight.userdev") version "1.7.5"
+    id("io.papermc.paperweight.userdev") version "1.7.7"
 }
 
 repositories {
@@ -12,11 +11,11 @@ repositories {
 }
 
 dependencies {
-    paperweight.paperDevBundle("1.21.3-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("1.21.4-R0.1-SNAPSHOT")
 }
 
 group = "com.github.stefvanschie.inventoryframework"
-version = "0.11.0-SNAPSHOT"
+version = "0.11.1-SNAPSHOT"
 description = "IF"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
