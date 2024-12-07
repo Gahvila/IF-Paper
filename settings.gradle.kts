@@ -1,1 +1,1 @@
-rootProject.name = "IF"
+rootProject.name = "IF-Paper"

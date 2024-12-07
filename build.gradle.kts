@@ -30,6 +30,9 @@ tasks {
     withType<JavaCompile> {
         options.encoding = "UTF-8"
     }
+    assemble {
+        dependsOn(publishToMavenLocal)
+    }
     java {
         toolchain {
             languageVersion.set(JavaLanguageVersion.of(21))
