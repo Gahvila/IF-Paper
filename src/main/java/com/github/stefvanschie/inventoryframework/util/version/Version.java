@@ -17,17 +17,17 @@ import java.util.EnumSet;
 public enum Version {
 
     /**
-     * Version 1.21.2 - 1.21.3
+     * Version 1.21.3
      *
      * @since 0.10.18
      */
-    V1_21_2_3;
+    LATEST;
 
     /**
      * A collection of versions on which modern smithing tables are available.
      */
     private static final Collection<Version> MODERN_SMITHING_TABLE_VERSIONS = EnumSet.of(
-            V1_21_2_3
+            LATEST
     );
 
     /**
@@ -35,7 +35,7 @@ public enum Version {
      */
     @NotNull
     private static final Collection<@NotNull Version> INTERFACE_INVENTORY_VIEW = EnumSet.of(
-            V1_21_2_3
+            LATEST
     );
 
     /**
@@ -71,8 +71,8 @@ public enum Version {
     public static Version getVersion() {
         String version = Bukkit.getBukkitVersion().split("-")[0];
 
-        if (version.equals("1.21.3")) {
-            return V1_21_2_3;
+        if (version.equals("1.21.4")) {
+            return LATEST;
         }
         throw new UnsupportedVersionException("The server version provided is not supported");
     }
