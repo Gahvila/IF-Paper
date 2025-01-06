@@ -1,7 +1,7 @@
 plugins {
     java
     `maven-publish`
-    id("io.papermc.paperweight.userdev") version "1.7.7"
+    id("io.papermc.paperweight.userdev") version "2.0.0-beta.12"
 }
 
 repositories {
@@ -20,8 +20,23 @@ description = "IF"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
 publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
+    repositories {
+        maven {
+            name = "gahvila-snapshots"
+            url = uri("https://repo.gahvila.net/snapshots/")
+            credentials(PasswordCredentials::class)
+            authentication {
+                create<BasicAuthentication>("basic")
+            }
+        }
+    }
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.stefvanschie"
+            artifactId = "inventoryframework"
+            version = findProperty("version").toString()
+            from(components["java"])
+        }
     }
 }
 
