@@ -22,7 +22,7 @@ java.sourceCompatibility = JavaVersion.VERSION_21
 publishing {
     repositories {
         maven {
-            name = "gahvila-snapshots"
+            name = "gahvila"
             url = uri("https://repo.gahvila.net/snapshots/")
             credentials(PasswordCredentials::class)
             authentication {
