@@ -14,7 +14,7 @@ dependencies {
     paperweight.paperDevBundle("1.21.4-R0.1-SNAPSHOT")
 }
 
-group = "com.github.stefvanschie.inventoryframework"
+group = "net.gahvila.inventoryframework"
 version = "0.11.1-SNAPSHOT"
 description = "IF"
 java.sourceCompatibility = JavaVersion.VERSION_21
@@ -32,7 +32,7 @@ publishing {
     }
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.stefvanschie"
+            groupId = "net.gahvila"
             artifactId = "inventoryframework"
             version = findProperty("version").toString()
             from(components["java"])
